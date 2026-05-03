@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expertily | Next-Gen Digital Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+        
+        :root {
+            --brand: #6366f1;
+            --surface: #ffffff;
+            --text-main: #020617;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #fcfcfd;
+            overflow-x: hidden;
+            color: var(--text-main);
+            scroll-behavior: smooth;
+        }
+
+        /* Modern Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Advanced Button Animations */
+        .btn-modern {
+            position: relative;
+            background: var(--brand);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+        }
+        
+        .btn-modern:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.5);
+        }
+
+        /* Course Icon Container */
+        .icon-box {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            transition: all 0.5s ease;
+        }
+        
+        .group:hover .icon-box {
+            background: var(--brand);
+            color: white !important;
+            transform: translateY(-5px) rotate(5deg);
+        }
+
+        /* Review Marquee */
+        .marquee-wrapper {
+            overflow: hidden;
+            padding: 40px 0;
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        }
+
+        .marquee-container {
+            display: flex;
+            gap: 24px;
+            animation: slide 60s linear infinite;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 3.5rem !important; }
+            .marquee-container { animation-duration: 30s; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation -->
+    <nav class="fixed top-0 w-full z-[1000] px-4 py-4 md:px-8">
+        <div class="max-w-7xl mx-auto glass rounded-[2.5rem] px-6 py-4 flex justify-between items-center shadow-sm border border-slate-200/50">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-indigo-200">
+                    <i class="fas fa-bolt text-xl"></i>
+                </div>
+                <span class="text-2xl font-black tracking-tighter text-slate-900">EXPERTILY</span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-10">
+                <a href="#courses" class="text-sm font-bold text-slate-500 hover:text-indigo-600 transition">Programs</a>
+                <a href="#benefits" class="text-sm font-bold text-slate-500 hover:text-indigo-600 transition">Experience</a>
+                <a href="#reviews" class="text-sm font-bold text-slate-500 hover:text-indigo-600 transition">500+ Wall</a>
+            </div>
+
+            <a href="https://wa.me/923455672710" class="btn-modern text-white text-[10px] font-black px-6 py-3 rounded-full uppercase tracking-[0.2em] shadow-lg">
+                Join Now
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-40 pb-20 px-6 min-h-screen flex items-center bg-white">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-indigo-50/30 -z-10 rounded-l-[10rem] hidden lg:block"></div>
+        
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center w-full">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-flex items-center space-x-2 bg-slate-100 px-4 py-2 rounded-full mb-8">
+                    <span class="text-[10px] font-black text-slate-500 uppercase tracking-widest">ISO Certified Academy</span>
+                </div>
+                <h1 class="hero-title text-6xl md:text-8xl font-black leading-[0.95] mb-8 text-slate-900 tracking-tight">
+                    Master <span class="text-indigo-600">Digital</span> <br>Wealth.
+                </h1>
+                <p class="text-slate-500 text-lg md:text-xl mb-12 max-w-lg font-medium leading-relaxed">
+                    Seekhein wo hunar jo market ki zaroorat hai. Pakistan's most trusted professional skill platform for mobile & laptop users.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="#courses" class="btn-modern text-white px-12 py-6 rounded-3xl font-black text-xl text-center shadow-2xl">Start Course</a>
+                    <div class="flex items-center space-x-4">
+                        <div class="flex -space-x-3">
+                            <div class="w-12 h-12 rounded-full bg-indigo-100 border-4 border-white flex items-center justify-center font-bold text-indigo-600 text-xs">5k+</div>
+                        </div>
+                        <div>
+                            <p class="text-xs font-black text-slate-900">Success Stories</p>
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Across Pakistan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative lg:block" data-aos="fade-left" data-aos-delay="200">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4 pt-12">
+                        <div class="bg-indigo-600 h-64 rounded-[3rem] p-8 text-white flex flex-col justify-end shadow-2xl">
+                            <i class="fas fa-star text-4xl mb-4 opacity-50"></i>
+                            <p class="text-3xl font-black">4.9/5</p>
+                            <p class="text-xs font-bold opacity-70">Student Rating</p>
+                        </div>
+                        <div class="bg-slate-100 h-48 rounded-[3rem] p-8 text-slate-900 flex flex-col justify-end">
+                            <i class="fas fa-certificate text-3xl mb-4 text-indigo-600"></i>
+                            <p class="text-xl font-black italic">Verified</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-slate-900 h-48 rounded-[3rem] p-8 text-white flex flex-col justify-end shadow-2xl">
+                            <i class="fas fa-users text-3xl mb-4 text-indigo-400"></i>
+                            <p class="text-xl font-black">500+</p>
+                            <p class="text-xs opacity-50 uppercase font-bold">Live Reviews</p>
+                        </div>
+                        <div class="bg-indigo-100 h-64 rounded-[3rem] p-8 text-indigo-600 flex flex-col justify-end">
+                            <i class="fas fa-laptop-code text-4xl mb-4 opacity-50"></i>
+                            <p class="text-2xl font-black">Job Ready</p>
+                            <p class="text-xs font-bold text-indigo-400 uppercase">Curriculum</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Courses Grid with Icons -->
+    <section id="courses" class="py-32 px-6 bg-slate-50/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
+                <div data-aos="fade-right">
+                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter text-slate-900 mb-4 leading-none">Professional <br><span class="text-indigo-600 italic">Academy</span></h2>
+                    <p class="text-slate-400 font-bold uppercase tracking-[0.3em] text-xs">Modern Skillset 2024</p>
+                </div>
+                <div class="hidden md:block w-32 h-1 bg-slate-200 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="group bg-white rounded-[4rem] p-10 shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 flex flex-col items-center text-center" data-aos="fade-up">
+                    <div class="icon-box w-32 h-32 rounded-[2.5rem] flex items-center justify-center text-indigo-600 text-5xl mb-10 shadow-inner">
+                        <i class="fas fa-bezier-curve"></i>
+                    </div>
+                    <h3 class="text-3xl font-black mb-4 tracking-tighter text-slate-900 uppercase">Graphic <br>Designing</h3>
+                    <p class="text-slate-500 text-sm mb-12 leading-relaxed">Adobe Photoshop, Illustrator aur modern brand design basics seekhein.</p>
+                    <div class="w-full pt-8 border-t border-slate-50 flex justify-between items-center mt-auto">
+                        <div class="text-left">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Course Fee</p>
+                            <p class="text-2xl font-black text-indigo-600">Rs. 2,000</p>
+                        </div>
+                        <a href="https://wa.me/923455672710?text=Enroll%20Graphic" class="w-16 h-16 bg-slate-950 text-white rounded-[1.8rem] flex items-center justify-center group-hover:bg-indigo-600 transition shadow-xl">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="group bg-white rounded-[4rem] p-10 shadow-sm hover:shadow-2xl transition-all duration-500 border-2 border-indigo-50 flex flex-col items-center text-center scale-105 z-10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box w-32 h-32 rounded-[2.5rem] flex items-center justify-center text-indigo-600 text-5xl mb-10 shadow-inner">
+                        <i class="fas fa-clapperboard"></i>
+                    </div>
+                    <h3 class="text-3xl font-black mb-4 tracking-tighter text-slate-900 uppercase">Video <br>Editing</h3>
+                    <p class="text-slate-500 text-sm mb-12 leading-relaxed">Pro level Reels, Shorts aur YouTube editing Premiere Pro ke sath.</p>
+                    <div class="w-full pt-8 border-t border-slate-50 flex justify-between items-center mt-auto">
+                        <div class="text-left">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Course Fee</p>
+                            <p class="text-2xl font-black text-indigo-600">Rs. 2,500</p>
+                        </div>
+                        <a href="https://wa.me/923455672710?text=Enroll%20Video" class="w-16 h-16 bg-indigo-600 text-white rounded-[1.8rem] flex items-center justify-center shadow-xl">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="group bg-white rounded-[4rem] p-10 shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box w-32 h-32 rounded-[2.5rem] flex items-center justify-center text-indigo-600 text-5xl mb-10 shadow-inner">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-3xl font-black mb-4 tracking-tighter text-slate-900 uppercase">Digital <br>Marketing</h3>
+                    <p class="text-slate-500 text-sm mb-12 leading-relaxed">Facebook/Instagram Ads aur business scaling ki mukammal training.</p>
+                    <div class="w-full pt-8 border-t border-slate-50 flex justify-between items-center mt-auto">
+                        <div class="text-left">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Course Fee</p>
+                            <p class="text-2xl font-black text-indigo-600">Rs. 3,000</p>
+                        </div>
+                        <a href="https://wa.me/923455672710?text=Enroll%20Marketing" class="w-16 h-16 bg-slate-950 text-white rounded-[1.8rem] flex items-center justify-center group-hover:bg-indigo-600 transition shadow-xl">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Wall (500+ Reviews) -->
+    <section id="reviews" class="py-32 bg-slate-950 overflow-hidden relative">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.05)_0%,transparent_70%)]"></div>
+        <div class="text-center mb-24 relative z-10">
+            <h2 class="text-5xl md:text-7xl font-black text-white italic tracking-tighter mb-4">Wall of Fame</h2>
+            <p class="text-indigo-500 font-bold uppercase text-[10px] tracking-[0.5em] italic">500+ Professionals Created</p>
+        </div>
+
+        <div class="marquee-wrapper">
+            <div class="marquee-container">
+                <!-- Review Card -->
+                <div class="w-80 bg-white/5 border border-white/10 p-10 rounded-[3rem] shrink-0 backdrop-blur-xl">
+                    <div class="flex text-yellow-400 text-xs mb-6">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-white text-sm italic mb-8 leading-relaxed opacity-80">"Expertily ne meri life change kar di. Ab main freelancing se earn kar raha hoon."</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-10 h-10 rounded-2xl bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-black">AM</div>
+                        <span class="text-white text-xs font-black uppercase tracking-widest">Asad Malik</span>
+                    </div>
+                </div>
+                <!-- Duplicate cards for smooth scrolling -->
+                <div class="w-80 bg-white/5 border border-white/10 p-10 rounded-[3rem] shrink-0 backdrop-blur-xl">
+                    <div class="flex text-yellow-400 text-xs mb-6">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-white text-sm italic mb-8 leading-relaxed opacity-80">"Laptop ho ya mobile, seekhna boht easy hai yahan se. Best support team."</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-10 h-10 rounded-2xl bg-pink-500/20 border border-pink-500/30 flex items-center justify-center text-pink-400 font-black">SK</div>
+                        <span class="text-white text-xs font-black uppercase tracking-widest">Sana Khan</span>
+                    </div>
+                </div>
+                <div class="w-80 bg-white/5 border border-white/10 p-10 rounded-[3rem] shrink-0 backdrop-blur-xl">
+                    <div class="flex text-yellow-400 text-xs mb-6">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-white text-sm italic mb-8 leading-relaxed opacity-80">"Verified certificate mere career ke liye boht helpful raha."</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-10 h-10 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-black">RZ</div>
+                        <span class="text-white text-xs font-black uppercase tracking-widest">Raza J.</span>
+                    </div>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="w-80 bg-white/5 border border-white/10 p-10 rounded-[3rem] shrink-0 backdrop-blur-xl">
+                    <div class="flex text-yellow-400 text-xs mb-6">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-white text-sm italic mb-8 leading-relaxed opacity-80">"Highly professional courses and top-notch guidance!"</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-10 h-10 rounded-2xl bg-orange-500/20 border border-orange-500/30 flex items-center justify-center text-orange-400 font-black">FA</div>
+                        <span class="text-white text-xs font-black uppercase tracking-widest">Faisal A.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-32 pb-16 px-6">
+        <div class="max-w-7xl mx-auto border-t border-slate-100 pt-16 flex flex-col md:flex-row justify-between items-center gap-12">
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white">
+                        <i class="fas fa-bolt text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-black tracking-tighter text-slate-900 uppercase">EXPERTILY</span>
+                </div>
+                <p class="text-slate-400 text-xs font-bold uppercase tracking-widest">Sahiwal's #1 Skill Academy</p>
+            </div>
+            
+            <div class="flex space-x-12">
+                <a href="#" class="text-slate-400 hover:text-indigo-600 transition text-2xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-slate-400 hover:text-indigo-600 transition text-2xl"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-slate-400 hover:text-indigo-600 transition text-2xl"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+            <div class="text-center md:text-right">
+                <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2">WhatsApp Support</p>
+                <p class="text-2xl font-black text-slate-900">03455672710</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-20 text-center text-[10px] font-black text-slate-300 uppercase tracking-[0.5em]">
+            © 2026 Expertily Academy Pakistan. Verified Digital Skill Provider.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: true });
+    </script>
+</body>
+</html>
